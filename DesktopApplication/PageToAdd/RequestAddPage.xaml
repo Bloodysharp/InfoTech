@@ -1,0 +1,69 @@
+﻿<Page x:Class="DesktopApplication.PageToAdd.RequestAddPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DesktopApplication.PageToAdd"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RequestAddPage">
+
+    <Page.Resources>
+        <!--notify source-->
+        <LinearGradientBrush x:Key="RedGradient" StartPoint="0,0" EndPoint="1,0">
+            <GradientStop Offset="0" Color="#602D30" />
+            <GradientStop Offset="0.4" Color="#20232E" />
+        </LinearGradientBrush>
+
+
+        <LinearGradientBrush x:Key="GreenGradient" StartPoint="0,0" EndPoint="1,0">
+            <GradientStop Offset="0" Color="#1D4F28" />
+            <GradientStop Offset="0.4" Color="#20232E" />
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="YellowGradient" StartPoint="0,0" EndPoint="1,0">
+            <GradientStop Offset="0" Color="#5D4E1E" />
+            <GradientStop Offset="0.4" Color="#20232E" />
+        </LinearGradientBrush>
+    </Page.Resources>
+    <Border Style="{StaticResource whiteBorder}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+
+
+            </Grid.RowDefinitions>
+
+            <Grid Background="#ffffff" Grid.RowSpan="6" Grid.ColumnSpan="2"></Grid>
+            <!--<TextBlock Text="ID" TextAlignment="Center" FontSize="13" FontWeight="SemiBold"  Margin="0,17,0,17"/>
+            <TextBlock Text="Дата создания" TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Row="1" Margin="0,17,0,17"/>-->
+            <TextBlock Text="ID" TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Row="0" Margin="0,17,0,17"/>
+            <TextBlock Text="Название техники" TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Row="1" Margin="0,17,0,17"/>
+            <TextBlock Text="Название модели" TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Row="2" Margin="0,19,0,68" Grid.RowSpan="2"/>
+            <TextBlock Text="Поломка" TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Row="3" Margin="0,19,0,0"/>
+            <TextBlock Text="ID клиента " TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Row="4" Margin="0,21,0,0"/>
+            <TextBlock Text="ID мастера" TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Row="5" Margin="0,21,0,68" Grid.RowSpan="2"/>
+            <!--<TextBox Text="{Binding requestID}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="1" x:Name="idTextBox" Background="#ffffff" Margin="0,17,0,0"/>
+            <TextBox Text="{Binding addingDate}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="1" x:Name="datetimeTextBox"  Grid.Row="1" Background="#ffffff" Margin="0,17,0,0"/>-->
+            <TextBox Text="{Binding requestID}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="1" x:Name="idTextBox"  Grid.Row="0" Background="#ffffff" Margin="0,17,0,0"/>
+            <TextBox Text="{Binding computerTechType}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="1" x:Name="techTypeTextBox"  Grid.Row="1" Background="#ffffff" Margin="0,17,0,0"/>
+            <TextBox Text="{Binding computerTechModel}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="2" x:Name="techmodelTextBox" Margin="0,19,0,68" Grid.RowSpan="2" Background="#ffffff" Grid.Row="2"/>
+            <TextBox Text="{Binding problemDescryption}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="2" Grid.Row="3" x:Name="problemTextBox" Background="#ffffff" Margin="0,19,0,0" />
+            <TextBox Text="{Binding clientID}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="1" Grid.Row="4" x:Name="clientTextBox" Background="#ffffff" Margin="0,21,0,0"/>
+            <TextBox Text="{Binding masterID}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="1" x:Name="numberTextBox" Grid.Row="5"  Margin="0,21,0,68" Grid.RowSpan="2" Background="#ffffff" />
+
+            <Button Grid.ColumnSpan="2" Grid.Row="7" Content="Сохранить" Style="{StaticResource addButton}" Click="BtnSave_Click"/>
+        </Grid>
+    </Border>
+</Page>

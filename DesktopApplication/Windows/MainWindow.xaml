@@ -1,0 +1,178 @@
+﻿<Window x:Class="DesktopApplication.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesktopApplication.Windows"
+        mc:Ignorable="d"
+               xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        WindowStartupLocation="CenterScreen" Background="Transparent"
+        WindowStyle="None" AllowsTransparency="True" Height="780" Width="1280">
+
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVisConverter" />
+    </Window.Resources>
+
+    <Border CornerRadius="25" Padding="20" Background="#F7F6F4" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="220"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="260"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="130"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--Menu-->
+            <Border Grid.RowSpan="3" CornerRadius="25">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#FB7154" Offset="0"/>
+                        <GradientStop Color="#FB6161" Offset="0.8"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <StackPanel>
+                    <!--Logo-->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 30 0 10" Width="165">
+
+                        <Grid>
+                            <Border Background="#ffffff" CornerRadius="50" Width="35" Height="35" />
+                            
+                            <Border Width="35" Height="35" BorderThickness="3" BorderBrush="#ffffff" CornerRadius="50" Cursor="">
+                                <Border.Effect>
+                                    <DropShadowEffect BlurRadius="10" Opacity="0.3"/>
+                                </Border.Effect>
+
+                                <Button Style="{StaticResource MaterialDesignIconForegroundButton}" Content="{materialDesign:PackIcon account}"   BorderThickness="0" Foreground="#FB7154" Width="25" Height="25" Margin="0,0,0,0" Click="Switch_btn" />
+
+                            </Border>
+                        </Grid>
+
+
+                        <TextBlock Text="Log out" Foreground="#ffffff" FontWeight="SemiBold" FontSize="30" Margin="10 0 0 3">
+                            <TextBlock.Effect>
+                                <DropShadowEffect BlurRadius="10" Opacity="0.3"/>
+                            </TextBlock.Effect>
+                        </TextBlock>
+                    </StackPanel>
+
+                    <!--Menu Items-->
+                    <TextBlock Text="Main" Style="{StaticResource menuTitle}"/>
+
+                    <Button Style="{StaticResource menuButton}" Background="#F7F6F4" Foreground="#FB7657" Click="ButtonReq_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Icon:PackIconMaterial Kind="Home" Style="{StaticResource menuButtonIcon}"/>
+                            <TextBlock Text="Requests" Style="{StaticResource menuButtonText}"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Style="{StaticResource menuButton}" Click="ButtonUserReq_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Icon:PackIconMaterial Kind="ListStatus" Style="{StaticResource menuButtonIcon}"/>
+                            <TextBlock Text="User Requests" Style="{StaticResource menuButtonText}"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Style="{StaticResource menuButton}" Click="ButtonMasters_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Icon:PackIconMaterial Kind="ToolboxOutline" Style="{StaticResource menuButtonIcon}"/>
+                            <TextBlock Text="Masters" Style="{StaticResource menuButtonText}"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Style="{StaticResource menuButton}" Click="ButtonClients_Click" >
+                        <StackPanel Orientation="Horizontal">
+                            <Icon:PackIconMaterial Kind="Typewriter" Style="{StaticResource menuButtonIcon}"/>
+                            <TextBlock Text="Clients" Style="{StaticResource menuButtonText}"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Style="{StaticResource menuButton}" Click="ButtonQR_Click" >
+                        <StackPanel Orientation="Horizontal">
+                            <Icon:PackIconMaterial Kind="Qrcode" Style="{StaticResource menuButtonIcon}"/>
+                            <TextBlock Text="QR Code" Style="{StaticResource menuButtonText}"/>
+                        </StackPanel>
+                    </Button>
+
+                    <TextBlock Text="Help" Style="{StaticResource menuTitle}"/>
+
+                    <Button Style="{StaticResource menuButton}">
+                        <StackPanel Orientation="Horizontal">
+                            <Icon:PackIconMaterial Kind="MessageSettingsOutline" Style="{StaticResource menuButtonIcon}"/>
+                            <TextBlock Text="Messages" Style="{StaticResource menuButtonText}"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Style="{StaticResource menuButton}">
+                        <StackPanel Orientation="Horizontal">
+                            <Icon:PackIconMaterial Kind="CogOutline" Style="{StaticResource menuButtonIcon}"/>
+                            <TextBlock Text="Settings" Style="{StaticResource menuButtonText}"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Style="{StaticResource menuButton}">
+                        <StackPanel Orientation="Horizontal">
+                            <Icon:PackIconMaterial Kind="PhonePausedOutline" Style="{StaticResource menuButtonIcon}"/>
+                            <TextBlock Text="Support" Style="{StaticResource menuButtonText}"/>
+                        </StackPanel>
+                    </Button>
+
+                </StackPanel>
+            </Border>
+            <!--<Button x:Name="BtnBack" Content="X" Click="BtnBack_Click" Grid.Column="2" Margin="219,0,0,47" Background="Red" BorderBrush="Red" Foreground="White" Grid.RowSpan="2"/>-->
+            <!--Search-->
+            <Border Grid.Column="1" Style="{StaticResource whiteBorder}" Margin="20,0,0,20" Grid.ColumnSpan="2">
+                <Grid>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                        <Border Width="50" Height="50" CornerRadius="10" Margin="5 0 20 0">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                    <GradientStop Color="#FB7456" Offset="0"/>
+                                    <GradientStop Color="#FA5654" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+
+                            <Image Source="/Images/furniturecion.png" Width="40" Height="40"/>
+                        </Border>
+
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock Text="Hello, Team" Style="{StaticResource titleText}" FontSize="26" FontWeight="Bold"/>
+                            <TextBlock Text="Have A Nice Day" Foreground="#6C879A" Margin="0 3 0 0"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <!--Search Textbox-->
+                    <Grid Width="300" HorizontalAlignment="Right">
+
+                        <TextBlock Margin="15 0" VerticalAlignment="Center" Foreground="#868686" IsHitTestVisible="False" Panel.ZIndex="1" 
+                                   Text="Search here ..." 
+                                   Visibility="{Binding ElementName=textBoxSearch, Path=Text.IsEmpty, Converter={StaticResource BoolToVisConverter}}" />
+
+                        <TextBox Name="textBoxSearch" Style="{StaticResource searchTextbox}" />
+
+                        <Icon:PackIconMaterial Kind="Magnify" Width="15" Height="15" Foreground="#FF6D46" HorizontalAlignment="Right" Margin="0 0 15 0" VerticalAlignment="Center"/>
+                    </Grid>
+
+                </Grid>
+            </Border>
+            <!--Right Section-->
+            <Grid Grid.Column="2" Grid.RowSpan="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+
+
+
+            </Grid>
+            <Frame Grid.Column="1" x:Name="MainFrame" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="20,0,10,0" NavigationUIVisibility="Hidden"/>
+
+        </Grid>
+    </Border>
+</Window>

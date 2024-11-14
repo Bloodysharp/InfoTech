@@ -1,0 +1,22 @@
+﻿<Window x:Class="DesktopApplication.Windows.CaptchaWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesktopApplication.Windows"
+        mc:Ignorable="d"
+                   xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Капча >:" Height="300" Width="350" Background="{x:Null}" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Icon="/Images/warning.png">
+    <materialDesign:Card Background="#17171c" UniformCornerRadius="15" materialDesign:ShadowAssist.ShadowDepth="Depth4">
+        <StackPanel Name="captchaSP" Visibility="Visible" Margin="5">
+            <StackPanel Width="299" Height="135" Name="CaptchaContainer" Margin="15"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Name="CaptchaUserText" materialDesign:TextFieldAssist.RippleOnFocusEnabled="False" Margin="15" Width="250" materialDesign:HintAssist.Hint="Введите капчу" materialDesign:HintAssist.Background="{x:Null}" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedTextBox}" Foreground="White" materialDesign:TextFieldAssist.LeadingIcon="ClosedCaption" materialDesign:TextFieldAssist.HasLeadingIcon="True" />
+                <Button Style="{StaticResource MaterialDesignIconButton}" Content="{materialDesign:PackIcon Refresh, Size=35}" Background="#17171c" Foreground="White" Click="Button_Click_1"/>
+            </StackPanel>
+            <Button Width="150" Content="Проверить" Style="{StaticResource MaterialDesignOutlinedButton}" Foreground="White" BorderBrush="White" Click="Button_Click"/>
+        </StackPanel>
+    </materialDesign:Card>
+</Window>
+
+
