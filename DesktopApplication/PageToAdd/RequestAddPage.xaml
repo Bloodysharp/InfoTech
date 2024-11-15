@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DesktopApplication.PageToAdd"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="550" d:DesignWidth="800"
       Title="RequestAddPage">
 
     <Page.Resources>
@@ -41,6 +41,7 @@
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
+                <RowDefinition/>
 
 
             </Grid.RowDefinitions>
@@ -52,16 +53,18 @@
             <TextBlock Text="Название техники" TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Row="1" Margin="0,17,0,17"/>
             <TextBlock Text="Название модели" TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Row="2" Margin="0,19,0,68" Grid.RowSpan="2"/>
             <TextBlock Text="Поломка" TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Row="3" Margin="0,19,0,0"/>
-            <TextBlock Text="ID клиента " TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Row="4" Margin="0,21,0,0"/>
-            <TextBlock Text="ID мастера" TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Row="5" Margin="0,21,0,68" Grid.RowSpan="2"/>
+            <TextBlock Text="Статус" TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Row="4" Margin="0,19,0,0"/>
+            <TextBlock Text="ID клиента " TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Row="5" Margin="0,21,0,0"/>
+            <TextBlock Text="ID мастера" TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Row="6" Margin="0,21,0,68" Grid.RowSpan="2"/>
             <!--<TextBox Text="{Binding requestID}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="1" x:Name="idTextBox" Background="#ffffff" Margin="0,17,0,0"/>
             <TextBox Text="{Binding addingDate}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="1" x:Name="datetimeTextBox"  Grid.Row="1" Background="#ffffff" Margin="0,17,0,0"/>-->
             <TextBox Text="{Binding requestID}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="1" x:Name="idTextBox"  Grid.Row="0" Background="#ffffff" Margin="0,17,0,0"/>
             <TextBox Text="{Binding computerTechType}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="1" x:Name="techTypeTextBox"  Grid.Row="1" Background="#ffffff" Margin="0,17,0,0"/>
             <TextBox Text="{Binding computerTechModel}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="2" x:Name="techmodelTextBox" Margin="0,19,0,68" Grid.RowSpan="2" Background="#ffffff" Grid.Row="2"/>
-            <TextBox Text="{Binding problemDescryption}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="2" Grid.Row="3" x:Name="problemTextBox" Background="#ffffff" Margin="0,19,0,0" />
-            <TextBox Text="{Binding clientID}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="1" Grid.Row="4" x:Name="clientTextBox" Background="#ffffff" Margin="0,21,0,0"/>
-            <TextBox Text="{Binding masterID}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="1" x:Name="numberTextBox" Grid.Row="5"  Margin="0,21,0,68" Grid.RowSpan="2" Background="#ffffff" />
+            <TextBox Text="{Binding problemDescryption}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="3" Grid.Row="3" x:Name="problemTextBox" Background="#ffffff" Margin="0,19,0,0" />
+            <TextBox Text="{Binding requestStatus}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="2" Grid.Row="4" x:Name="statusTextBox" Background="#ffffff" Margin="0,19,0,0" />
+            <TextBox Text="{Binding clientID}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="1" Grid.Row="5" x:Name="clientTextBox" Background="#ffffff" Margin="0,21,0,0"/>
+            <TextBox Text="{Binding masterID}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="1" x:Name="numberTextBox" Grid.Row="6"  Margin="0,21,0,68" Grid.RowSpan="2" Background="#ffffff" />
 
             <Button Grid.ColumnSpan="2" Grid.Row="7" Content="Сохранить" Style="{StaticResource addButton}" Click="BtnSave_Click"/>
         </Grid>

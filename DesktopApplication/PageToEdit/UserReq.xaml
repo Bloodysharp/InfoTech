@@ -54,9 +54,9 @@
             <TextBlock Text="Техника" TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Row="4" Margin="0,21,0,68" Grid.RowSpan="2"/>
             <TextBlock Text="Наименование"  Grid.Row="5" TextAlignment="Center" FontSize="13" FontWeight="SemiBold"  Margin="0,17,0,17"/>
             <TextBlock Text="Проблема"  Grid.Row="6" TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Margin="0,17,0,17"/>
-            <TextBox Text="{Binding userID}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="1" x:Name="techTypeTextBox"  Grid.Row="0" Background="#ffffff" Margin="0,17,0,0"/>
-            <TextBox Text="{Binding fio}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="1" x:Name="techmodelTextBox" Margin="0,19,0,68" Grid.RowSpan="2" Background="#ffffff" Grid.Row="1"/>
-            <TextBox Text="{Binding problemDescryption}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="1" Grid.Row="2" x:Name="problemTextBox" Background="#ffffff" Margin="0,19,0,0" />
+            <TextBox Text="{Binding requestID}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="1" x:Name="techTypeTextBox"  Grid.Row="0" Background="#ffffff" Margin="0,17,0,0"/>
+            <TextBox Text="{Binding userID}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="1" x:Name="techmodelTextBox" Margin="0,19,0,68" Grid.RowSpan="2" Background="#ffffff" Grid.Row="1"/>
+            <TextBox Text="{Binding fio}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="1" Grid.Row="2" x:Name="problemTextBox" Background="#ffffff" Margin="0,19,0,0" />
             <TextBox Text="{Binding phone}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="1" Grid.Row="3" x:Name="clientTextBox" Background="#ffffff" Margin="0,21,0,0"/>
 
             <TextBox Text="{Binding computerTechType}"  TextAlignment="Center" FontSize="13" FontWeight="SemiBold" Grid.Column="1" x:Name="technikTextBox" Grid.Row="4"  Margin="0,21,0,68" Grid.RowSpan="2" Background="#ffffff" />

@@ -146,17 +146,7 @@
                         </StackPanel>
                     </StackPanel>
 
-                    <!--Search Textbox-->
-                    <Grid Width="300" HorizontalAlignment="Right">
-
-                        <TextBlock Margin="15 0" VerticalAlignment="Center" Foreground="#868686" IsHitTestVisible="False" Panel.ZIndex="1" 
-                                   Text="Search here ..." 
-                                   Visibility="{Binding ElementName=textBoxSearch, Path=Text.IsEmpty, Converter={StaticResource BoolToVisConverter}}" />
-
-                        <TextBox Name="textBoxSearch" Style="{StaticResource searchTextbox}" />
-
-                        <Icon:PackIconMaterial Kind="Magnify" Width="15" Height="15" Foreground="#FF6D46" HorizontalAlignment="Right" Margin="0 0 15 0" VerticalAlignment="Center"/>
-                    </Grid>
+                   
 
                 </Grid>
             </Border>

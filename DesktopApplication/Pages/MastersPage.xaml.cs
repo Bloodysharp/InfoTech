@@ -59,5 +59,17 @@ namespace DesktopApplication.Pages
             }
 
         }
+        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        {
+            using (var context = new repairingShopEntities())
+            {
+                var searchText = textBoxFilter.Text; var requests = context.requests.Where(r =>
+                    r.computerTechType.Contains(searchText) || r.computerTechModel.Contains(searchText) ||
+                    r.problemDescryption.Contains(searchText) || r.requestStatus.Contains(searchText) ||
+                    r.repairParts.Contains(searchText) || r.masterID.ToString().Contains(searchText) ||
+                    r.clientID.ToString().Contains(searchText)).ToList();
+                RequestDG.ItemsSource = requests;
+            }
+        }
     }
 }

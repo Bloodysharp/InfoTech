@@ -162,7 +162,7 @@ namespace DesktopApplication.Windows
       
 
             string login = txtUsername.Text; string password = txtPassword.Text;
-            if ((AuthenticateUser(login, password)) && (login == "login1"))
+            if (AuthenticateUser(login, password))
             {
                 var mainWindow = new MainWindow();
                 mainWindow.Show();

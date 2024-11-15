@@ -40,9 +40,10 @@ namespace DesktopApplication.PageToEdit
         {
             try
             {
-                _currentRequest.userID =int.Parse(techTypeTextBox.Text);
-                _currentRequest.fio = techmodelTextBox.Text;
-                _currentRequest.problemDescryption = problemTextBox.Text;
+                _currentRequest.requestID = int.Parse(techTypeTextBox.Text);
+                _currentRequest.userID =int.Parse(techmodelTextBox.Text);
+                _currentRequest.fio = problemTextBox.Text;
+                _currentRequest.problemDescryption = troubleTextBox.Text;
                 _currentRequest.phone = clientTextBox.Text;
               
                 _currentRequest.computerTechType = technikTextBox.Text;

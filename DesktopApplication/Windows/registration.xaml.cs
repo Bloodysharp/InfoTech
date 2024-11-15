@@ -168,14 +168,14 @@ namespace DesktopApplication.Windows
             string connectionString = "Server=HOME-PC\\SQLEXPRESS;Initial Catalog=repairingShop;Integrated Security=True";
 
             // SQL-запрос для добавления данных
-            string query = "INSERT INTO users (userName, userLogin, userPassword, userType) " +
-                          "VALUES (@userName, @userLogin, @userPassword, @userType)";
+            string query = "INSERT INTO users (fio, userLogin, userPassword, userType) " +
+                          "VALUES (@fio, @userLogin, @userPassword, @userType)";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 // Параметры запроса
-                command.Parameters.AddWithValue("@userName", userName);
+                command.Parameters.AddWithValue("@fio", userName);
                 command.Parameters.AddWithValue("@userLogin", userLogin);
                 command.Parameters.AddWithValue("@userPassword", password);
                 command.Parameters.AddWithValue("@userType", userType);

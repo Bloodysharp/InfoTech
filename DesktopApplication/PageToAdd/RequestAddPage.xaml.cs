@@ -46,6 +46,7 @@ namespace DesktopApplication.PageToAdd
                     computerTechType = techTypeTextBox.Text,
                     computerTechModel = techmodelTextBox.Text,
                     problemDescryption = problemTextBox.Text,
+
                     masterID = int.Parse(numberTextBox.Text),
                     clientID = int.Parse(clientTextBox.Text)
                 };

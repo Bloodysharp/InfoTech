@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:DesktopApplication.Pages" xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+      xmlns:local="clr-namespace:DesktopApplication.Pages" xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MastersPage">
@@ -50,13 +50,14 @@
 
             <TextBlock Text="Filter by" Grid.Row="4" FontSize="13" FontWeight="SemiBold" Margin="0 0 215 0" Foreground="#121518" HorizontalAlignment="Right" VerticalAlignment="Center"/>
 
-            <!--Filter Textbox-->
             <Grid Width="200" HorizontalAlignment="Right" Grid.Row="4">
-                <TextBlock Margin="15 0" VerticalAlignment="Center" Foreground="#B0B9C6" IsHitTestVisible="False"
-                           Panel.ZIndex="1" Text="Search in Members ..."
-                           />
-
-                <TextBox Name="textBoxFilter" Style="{StaticResource filterTextBox}"/>
+                <TextBlock Margin="15,0,43,0" VerticalAlignment="Center" Foreground="#B0B9C6" IsHitTestVisible="False"
+               Panel.ZIndex="1" 
+               />
+                <Button Margin="172,0,-12,0" Content="{materialDesign:PackIcon Magnify}" Style="{StaticResource MaterialDesignIconForegroundButton}" Foreground="#FB7154" Click="SearchButton_Click">
+                    <!--<Icon:PackIconMaterial Kind="Magnify" Width="15" Height="15" Foreground="#FF6D46" HorizontalAlignment="Right" Margin="0 0 15 0" VerticalAlignment="Center"/>-->
+                </Button>
+                <TextBox x:Name="textBoxFilter" Style="{StaticResource filterTextBox}" Margin="0,0,43,0"/>
             </Grid>
 
             <!--Members Data Grid-->
